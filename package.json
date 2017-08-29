@@ -1,17 +1,24 @@
 {
   "name": "react-debounce-iframe",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": "Debouncing the iframe src updates",
+  "main": "lib/index.js",
+  "author": "Joseph Chiang <josephj6802@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.11"
+    "react-dom": "^15.6.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "rollup": "^0.49.1",
+    "rollup-plugin-babel": "^3.0.2"
   }
 }
