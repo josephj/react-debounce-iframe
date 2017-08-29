@@ -6,10 +6,14 @@ class Iframe extends Component {
   static displayName = 'Iframe';
   static propTypes = {
     src: PropTypes.string.isRequired,
-    debounceWait: PropTypes.number
+    debounceWait: PropTypes.number,
+    onDebounceStart: PropTypes.func,
+    onDebounceEnd: PropTypes.func,
   };
   static defaultProps = {
-    debounceWait: 0
+    debounceWait: 0,
+    onDebounceStart: _.noop(),
+    onDebounceEnd: _.noop()
   };
   constructor(props) {
     super(props);
@@ -35,12 +39,13 @@ class Iframe extends Component {
     // Delay to change
     if (this.timer) {
       clearTimeout(this.timer);
-      console.log(`Iframe - previous src has been cancelled.`);
+    } else {
+      this.props.onDebounceStart();
     }
     this.timer = setTimeout(() => {
-      console.log(`Iframe - ${src} is applied`);
       this.setState({src});
       this.timer = null;
+      this.props.onDebounceEnd(src);
     }, debounceWait);
   }
   render() {

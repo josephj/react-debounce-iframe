@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-iframe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Debouncing the iframe src updates",
   "main": "lib/index.js",
   "author": "Joseph Chiang <josephj6802@gmail.com>",
