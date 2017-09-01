@@ -12,8 +12,8 @@ class Iframe extends Component {
   };
   static defaultProps = {
     debounceWait: 0,
-    onDebounceStart: _.noop(),
-    onDebounceEnd: _.noop()
+    onDebounceStart: () => {},
+    onDebounceEnd: () => {}
   };
   constructor(props) {
     super(props);
