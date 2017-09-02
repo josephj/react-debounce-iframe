@@ -6,19 +6,26 @@
   "author": "Joseph Chiang",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "4.0.0-beta",
     "react": "^15.6.1",
     "react-debounce-iframe": "^0.0.7",
     "react-dom": "^15.6.1"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "npm run clean && NODE_ENV=production webpack",
+    "clean": "rm -rf dist/*",
+    "start": "npm run clean && webpack-dev-server --inline --hot --open"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
     "html-webpack-plugin": "^2.30.1",
-    "webpack": "^3.5.5"
+    "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   }
 }
