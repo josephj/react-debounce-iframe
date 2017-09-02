@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel';
+import uglify from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
 export default {
@@ -16,6 +17,7 @@ export default {
   },
   plugins: [
     'external-helpers',
+    uglify(),
     babel({
       exclude: 'node_modules/**'
     })
