@@ -28,10 +28,6 @@ class Iframe extends Component {
     // Not debounce at all
     if (!debounceWait) {
       this.setState({ src });
-      if (this.timer) {
-        clearTimeout(this.timer);
-        this.timer = null;
-      }
       return;
     }
 
