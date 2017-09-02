@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-iframe",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Avoid updating iframe src too frequently",
   "main": "lib/index.js",
   "author": "Joseph Chiang",

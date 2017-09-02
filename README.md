@@ -2,29 +2,25 @@ react-debounce-iframe
 ---------------------
 A react iframe component which allows you to reduce the src updating frequency.
 
-In the following example, it will only issue requests to `1.html` and `10.html`.
+In the following example, it will only issue requests to `1.html` and `5.html` ([Demo](https://josephj.github.io/react-debounce-iframe)).
 
 ```jsx
 import Iframe from 'react-debounce-iframe';
 
 class App extends Component {
   constructor(props) {
+    super(props);
     this.state = {src: '1.html'};
   }
   componentDidMount() {
-    setTimeout(() => this.setState({src: '2.html'}), 200);
-    setTimeout(() => this.setState({src: '3.html'}), 300);
-    setTimeout(() => this.setState({src: '4.html'}), 400);
-    setTimeout(() => this.setState({src: '5.html'}), 500);
-    setTimeout(() => this.setState({src: '6.html'}), 600);
-    setTimeout(() => this.setState({src: '7.html'}), 700);
-    setTimeout(() => this.setState({src: '8.html'}), 800);
-    setTimeout(() => this.setState({src: '9.html'}), 900);
-    setTimeout(() => this.setState({src: '10.html'}), 1000);
+    setTimeout(() => this.setState({src: '2.html'}), 300);
+    setTimeout(() => this.setState({src: '3.html'}), 600);
+    setTimeout(() => this.setState({src: '4.html'}), 900);
+    setTimeout(() => this.setState({src: '5.html'}), 1200);
   }
   render() {
     return (
-      <Iframe src={this.state.src} debounceWait={500}/> // Only issue requests to 1.html and 10.html.
+      <Iframe src={this.state.src} debounceWait={500}/> // Only issue requests to 1.html and 5.html.
     );
   }
 }

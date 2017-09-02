@@ -44,7 +44,7 @@ class Iframe extends Component {
     }, debounceWait);
   }
   render() {
-    const { debounceWait, src, title, ...otherProps } = this.props; // eslint-disable-line
+    const { debounceWait, src, title, onDebounceStart, onDebounceEnd, ...otherProps } = this.props; // eslint-disable-line
 
     return <iframe src={this.state.src} title={title} {...otherProps} />;
   }
