@@ -1,10 +1,14 @@
 {
   "name": "react-debounce-iframe",
   "version": "0.0.6",
-  "description": "Debouncing the iframe src updates",
+  "description": "Avoid updating iframe src too frequently",
   "main": "lib/index.js",
-  "author": "Joseph Chiang <josephj6802@gmail.com>",
+  "author": "Joseph Chiang",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josephj/react-debounce-iframe.git"
+  },
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
