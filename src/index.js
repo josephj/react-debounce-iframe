@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,7 +7,7 @@ class Iframe extends Component {
     src: PropTypes.string.isRequired,
     debounceWait: PropTypes.number,
     onDebounceStart: PropTypes.func,
-    onDebounceEnd: PropTypes.func,
+    onDebounceEnd: PropTypes.func
   };
   static defaultProps = {
     debounceWait: 0,
@@ -21,14 +20,14 @@ class Iframe extends Component {
     this.timer = null;
     this.state = {
       src: props.src
-    }
+    };
   }
   componentWillReceiveProps(nextProps) {
-    const {src, debounceWait} = nextProps;
+    const { src, debounceWait } = nextProps;
 
     // Not debounce at all
     if (!debounceWait) {
-      this.setState({src});
+      this.setState({ src });
       if (this.timer) {
         clearTimeout(this.timer);
         this.timer = null;
@@ -43,16 +42,15 @@ class Iframe extends Component {
       this.props.onDebounceStart();
     }
     this.timer = setTimeout(() => {
-      this.setState({src});
+      this.setState({ src });
       this.timer = null;
       this.props.onDebounceEnd(src);
     }, debounceWait);
   }
   render() {
-    const otherProps = _.omit(this.props, ['debounceWait', 'src', 'title']);
-    const { src } = this.state;
+    const { debounceWait, src, title, ...otherProps } = this.props; // eslint-disable-line
 
-    return <iframe src={src} title={this.props.title} {...otherProps} />;
+    return <iframe src={this.state.src} title={title} {...otherProps} />;
   }
 }
 

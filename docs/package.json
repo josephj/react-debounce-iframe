@@ -1,0 +1,11 @@
+{
+  "name": "react-debounce-iframe-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "author": "Joseph Chiang",
+  "license": "MIT",
+  "dependencies": {
+    "react-debounce-iframe": "^0.0.4"
+  }
+}

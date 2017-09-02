@@ -3,7 +3,7 @@ import pkg from './package.json';
 
 export default {
   external: Object.keys(pkg.dependencies),
-  input: 'src/Iframe.js',
+  input: 'src/index.js',
   output: {
     name: 'ReactDebounceIframe',
     file: 'lib/index.js',
