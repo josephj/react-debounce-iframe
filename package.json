@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-iframe",
-  "version": "0.0.7",
+  "version": "0.0.6",
   "description": "Avoid updating iframe src too frequently",
   "main": "lib/index.js",
   "author": "Joseph Chiang",
@@ -9,14 +9,12 @@
     "type": "git",
     "url": "https://github.com/josephj/react-debounce-iframe.git"
   },
-  "dependencies": {
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
-  },
   "scripts": {
     "build": "rollup -c",
     "test": "jest --coverage"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -29,6 +27,8 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^2.9.1",
     "jest": "^20.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "regenerator-runtime": "^0.11.0",
     "rollup": "^0.49.1",

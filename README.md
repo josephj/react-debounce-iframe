@@ -1,3 +1,7 @@
+[ ![NPM Status for josephj/react-debounce-iframe](https://img.shields.io/npm/v/react-debounce-iframe.svg) ](https://www.npmjs.com/package/react-debounce-iframe)
+[ ![Codeship Status for josephj/react-debounce-iframe](https://app.codeship.com/projects/f88856b0-71d9-0135-b489-0222a0494c20/status?branch=master) ](https://app.codeship.com/projects/243473)
+
+
 react-debounce-iframe
 ---------------------
 A react iframe component which allows you to reduce the src updating frequency.
