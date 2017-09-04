@@ -1,5 +1,6 @@
 [ ![NPM Status for josephj/react-debounce-iframe](https://img.shields.io/npm/v/react-debounce-iframe.svg) ](https://www.npmjs.com/package/react-debounce-iframe)
-[ ![Codeship Status for josephj/react-debounce-iframe](https://app.codeship.com/projects/f88856b0-71d9-0135-b489-0222a0494c20/status?branch=master) ](https://app.codeship.com/projects/243473)
+[ ![TravisCI Status for josephj/react-debounce-iframe](https://travis-ci.org/josephj/react-debounce-iframe.svg?branch=master) ](https://travis-ci.org/josephj/react-debounce-iframe)
+[ ![codecov](https://codecov.io/gh/josephj/react-debounce-iframe/branch/master/graph/badge.svg)](https://codecov.io/gh/josephj/react-debounce-iframe)
 
 
 react-debounce-iframe
